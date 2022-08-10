@@ -25,3 +25,5 @@ jobs:
         cache: maven
     - name: Step 3 - Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Step 4 - Publish to GitHub Packages Apache Maven
+      run: mvn -B deploy
