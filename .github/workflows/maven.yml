@@ -22,7 +22,7 @@ jobs:
          echo $GITHUB_SHA
          echo $GITHUB_REPOSITORY
          echo $GITHUB_WORKSPACE
-         echo "{{github.token}}"
+         echo "${{ github.token }}"
          
     - name: Step 1 - Downloads a copy of your repository on the runner.
       uses: actions/checkout@v3
