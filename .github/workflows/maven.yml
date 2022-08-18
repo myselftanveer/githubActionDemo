@@ -24,7 +24,7 @@ jobs:
          echo "GITHUB_SHA: $GITHUB_SHA"
          echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
          echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
-         echo "GITHUB_TOKEN: $GITHUB_TOKEN"
+         echo "GITHUB_TOKEN: ${{ github.token }}"
          
     - name: Step 1 - Downloads a copy of your repository on the runner.
       uses: actions/checkout@v3
