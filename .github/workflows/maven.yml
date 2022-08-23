@@ -17,10 +17,14 @@ jobs:
     steps:
     - name: List Files
       run: |
-         echo $GITHUB_SHA
-         echo $GITHUB_REPOSITORY
-         echo $GITHUB_WORKSPACE
-         echo "${{ github.token }}"
+         echo "HOME: $HOME"
+         echo "GITHUB_ACTION: $GITHUB_ACTION"
+         echo "GITHUB_ACTIONS: $GITHUB_ACTIONS"
+         echo "GITHUB_ACTOR: $GITHUB_ACTOR"
+         echo "GITHUB_SHA: $GITHUB_SHA"
+         echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
+         echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
+         echo "GITHUB_TOKEN: ${{ github.token }}"
          
     - name: Step 1 - Downloads a copy of your repository on the runner.
       uses: actions/checkout@v3
