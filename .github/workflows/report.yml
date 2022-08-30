@@ -24,6 +24,6 @@ jobs:
         cache: maven
     - name: Build and Run Tests
       run: mvn test --batch-mode --fail-at-end
-    - name: Publish Test Report
+    - name: Test Report Publish
       if: ${{ always() }}
       uses: scacap/action-surefire-report@v1
